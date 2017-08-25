@@ -63,16 +63,19 @@ class JudgeClass :
         wordcount=0
         #setにして単語検索でもいける
         for word in self.judge_list:
-            print(word)
+            #print(word)
             for w_s in score_dict:
                 if w_s[0]==word or w_s[1]==word :
                     score+=float(w_s[3])
-                    print('単語:'+w_s[3]+',合計:'+str(score))
+                    #print('単語:'+w_s[3]+',合計:'+str(score))
                     wordcount+=1
                     break
-        average=score/wordcount
-        print(average)
-        return average
+        if(wordcount!=0):
+            average=score/wordcount
+            print("平均"+str(average))
+            return average
+        else:
+            return 0
         ###############################
 
         
