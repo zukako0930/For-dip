@@ -72,7 +72,7 @@ class JudgeClass :
                     break
         if(wordcount!=0):
             average=score/wordcount
-            print("平均"+str(average))
+            #print("平均"+str(average))
             return average
         else:
             return 0
