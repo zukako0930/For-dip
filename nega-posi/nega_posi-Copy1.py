@@ -61,8 +61,6 @@ class JudgeClass :
         ############点数計算############
         score=0
         wordcount=0
-        min_score=1
-        max_score=-1
         #setにして単語検索でもいける
         for word in self.judge_list:
             #print(word)
