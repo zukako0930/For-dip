@@ -1,21 +1,16 @@
-
-# coding: utf-8
-
-# In[4]:
-
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 
 import sys
 import os
 import re
-import subprocess as spr
+import commands as cmd
 
 
 # クエリ検索したHTMLの取得
 def get_HTML(query):
 
-    html = spr.getstatusoutput("wget -O - https://www.bing.com/images/search?q=" + query)
+    html = cmd.getstatusoutput("wget -O - https://www.bing.com/images/search?q=" + query)
 
     return html
 
@@ -60,15 +55,4 @@ if __name__ == "__main__":
         print (u)
 
     # 画像をローカルに保存したいときに有効にする
-    #get_IMG(argvs[2],url)
-
-
-# In[3]:
-
-import subprocess
-
-
-# In[ ]:
-
-
-
+    get_IMG(argvs[2],url)
